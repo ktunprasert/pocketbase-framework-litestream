@@ -3,7 +3,7 @@ FROM golang:1.19
 WORKDIR /usr/src/app
 
 # Copy go files
-COPY go.mod go.sum main.go ./
+COPY go.mod go.sum *.go ./
 
 # Build the binary
 RUN go mod download && go mod verify
